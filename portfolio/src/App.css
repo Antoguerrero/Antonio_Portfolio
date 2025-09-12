@@ -1,5 +1,19 @@
+
 .App {
-  text-align: center;
+  position: relative;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+.App::after {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 10%; bottom: 0;
+  background: url('../public/img/logo.png') no-repeat right;
+  background-size: contain; /* ajusta si quieres */
+
+  opacity: 0.2; /* solo la imagen */
+  z-index: -1; /* queda detrás del contenido */
 }
 
 .App-logo {
