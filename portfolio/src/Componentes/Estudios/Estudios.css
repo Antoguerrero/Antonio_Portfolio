@@ -1,10 +1,23 @@
+@font-face {
+    font-family: 'yhlqmdlg';
+    src: url(../../../fonts/Y.ttf);
+  }
+
 .separador{
     position: absolute;
     height: 100px;
 }
+.separador:hover{
+    background-color: red;
+    cursor: pointer;
+}
+
+.sobre.dos{ 
+    padding-top: 10%;
+}
 
 .despues.dos{
-    gap: 5%;
+    gap: 2%;
 }
 
 .imagenes{
@@ -12,14 +25,14 @@
     flex-direction: column;
     margin-top: 5%;
     gap: 5%;
-    border: solid 2px red;
     width: 40%;
     height: 70vh;
+    min-width: 500px;
 }
 
-.sobre.dos{ 
-    border: solid 2px blue;
-}
+
+
+
 .categorias{
     width: 35%;
     height: 20%;
@@ -37,6 +50,8 @@
     margin-left: 20%;
     margin-top: 10%;
     z-index: 3;
+    min-width: 400px;
+
 }
 .categorias.tres{
     margin-left: 10%;
@@ -60,11 +75,48 @@
     border-radius: 5px;
     position: absolute;
     margin-left: 19%;
-    
-   
     z-index: 2;
+}
+
+
+.tituloSecundario{
+    font-family: 'yhlqmdlg';
+    color: white;
+    text-shadow: 0px 2px 1px  rgb(133, 95, 239);
 
 }
+
+.text.dos{
+    color: white;
+    font-size: 4rem;
+    
+}
+
+
+
+section{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 430px;
+}
+
+section img{
+    width: 0px;
+    min-width: 50px;
+    flex-grow: 1;
+    object-fit: cover;
+    opacity: 0.8;
+    transition: 0.5s ease;
+}
+img :hover{
+    cursor: pointer;
+    background-color: red;
+    width: 300px;
+    opacity: 1;
+    filter: contrast(120%);
+}
+
 
 @media (max-width:768px) {
 
@@ -73,8 +125,57 @@
     }
 
     .imagenes{
-        
         margin-top: 25%;
+        display: block;
+        height: auto;
+        min-width: 200px;
+
+    }
+    .categorias.cuatro{
+        margin-left: 15%;
+        margin-top: 0%;
+        width: 30%;
+        height: 20%;
+        position: relative;
+       
+        border-radius: 5px;
+    
+    }
+    .categorias.cinco{
+        width: 40%;
+        height: 17%;
+        border-radius: 5px;
+        position: relative;
+        margin-left: 20%;
+        margin-top: 2%;
         
     }
+    .categorias.tres{
+        margin-left: 10%;
+        width: 22%;
+        height: 15%;
+        border-radius: 5px;
+    }
+
+    .categorias{
+        width: 48%;
+        margin-left: 2%;
+        height: 20%;
+        border-radius: 5px;
+    
+    }
+
+    .absoluto{
+        position: relative;
+        margin-left: 10%;
+        margin-top: 10%;
+        z-index: 3;
+        min-width: 200px;
+
+    }
+    .categorias.dos{
+        width: 40%;
+        
+    }
+    
 }

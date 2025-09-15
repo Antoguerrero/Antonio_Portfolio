@@ -166,7 +166,17 @@
 
 
 @media screen and (max-width: 1080px) and (orientation: landscape) {
+
     
+    .foto{
+        height: 55vh;
+        width: 30%;
+        margin-left: 5%;
+        margin-top: 5%;
+        animation: fadeIn 2s ease forwards;
+        
+        
+    }
 
     
 }
