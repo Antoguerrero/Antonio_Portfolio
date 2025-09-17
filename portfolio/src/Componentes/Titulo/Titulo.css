@@ -122,10 +122,10 @@
     }
 
     .foto{
-        height: 35vh;
+        height: 33vh;
         width: 40%;
         margin-left: 5%;
-        margin-top: 5%;
+        margin-top: 8%;
         animation: fadeIn 2s ease forwards;
         
         
