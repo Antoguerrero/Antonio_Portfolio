@@ -23,6 +23,7 @@ export default function Administracion() {
                     <img className='categorias' src="/img/cebo.png" alt="categoria" />
                 </div>
             </div>
+            <div className="separadorDos"></div>
 
 
         </div>
