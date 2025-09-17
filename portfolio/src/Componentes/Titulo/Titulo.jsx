@@ -5,12 +5,13 @@ import { useEffect } from 'react';
 export default function Titulo() {
 
     const [ver, setVer] = useState(false);
-    const [posicion, setPosicion] = useState("hidden");
 
     function dejarVer() {
         setVer(true);
-        setPosicion("visible");
     }
+
+
+    
 
     
 
@@ -52,8 +53,7 @@ export default function Titulo() {
                         </div>
                     </div>
                 
-            
-
+          
 
         </div>
     )

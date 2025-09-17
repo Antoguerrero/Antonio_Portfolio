@@ -12,9 +12,10 @@
     z-index: 1;
 }
 
+
 .tituloPrincipal{
     font-family: 'yhlqmdlg';
-    color: rgb(133, 95, 239);
+    color: greenyellow;
     font-size: 40px;
     border-right: solid 3px white;
     text-shadow: 0px 3px 2px  rgb(218, 185, 235);
@@ -24,6 +25,7 @@
     animation: typing 6s steps(40,end) forwards, blink 0.7s 10 forwards;
     z-index: 2;
 }
+
 
 @keyframes typing {
     to{
@@ -52,7 +54,7 @@
 
 .soy{
     font-family: 'yhlqmdlg';
-    color: rgb(133, 95, 239);
+    color: greenyellow;
     font-size: 40px;
     justify-content: left ;
     align-items: left ;
@@ -200,10 +202,4 @@
         animation: fadeIn 2s ease forwards; /* aparece suavemente */
       
     }
-
-    
-    
-    
-
-    
 }

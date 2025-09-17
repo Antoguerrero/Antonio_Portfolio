@@ -1,181 +1,239 @@
 @font-face {
     font-family: 'yhlqmdlg';
     src: url(../../../fonts/Y.ttf);
-  }
+}
 
-.separador{
+.separador {
     position: absolute;
     height: 100px;
 }
-.separador:hover{
-    background-color: red;
-    cursor: pointer;
+
+.separadorDos {
+    height: 100px;
 }
 
-.sobre.dos{ 
+.sobre.dos {
     padding-top: 10%;
 }
 
-.despues.dos{
+.despues.dos {
     gap: 2%;
 }
 
-.imagenes{
-    display: flex;
-    flex-direction: column;
-    margin-top: 5%;
+.imagenes {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     gap: 5%;
-    width: 40%;
-    height: 70vh;
-    min-width: 500px;
-}
-
-
-
-
-.categorias{
     width: 35%;
-    height: 20%;
-    border-radius: 5px;
-
-}
-
-.categorias.dos{
-    width: 40%;
-    height: 30%;
-    
-}
-.absoluto{
-    position: absolute;
-    margin-left: 20%;
     margin-top: 10%;
-    z-index: 3;
-    min-width: 400px;
-
+    margin-bottom: 10%;
 }
-.categorias.tres{
-    margin-left: 10%;
-    width: 23%;
-    height: 22%;
+
+.categorias {
+    width: 100%;
+    height: auto;
     border-radius: 5px;
-}
-.categorias.cuatro{
-    margin-left: 20%;
-    margin-top: 20%;
-    width: 10%;
-    height: 20%;
-    position: absolute;
-    z-index: 4;
-    border-radius: 5px;
-
-}
-.categorias.cinco{
-    width: 15%;
-    height: 17%;
-    border-radius: 5px;
-    position: absolute;
-    margin-left: 19%;
-    z-index: 2;
+    box-shadow: 0px 0px 30px black;
 }
 
-
-.tituloSecundario{
-    font-family: 'yhlqmdlg';
+.text.dos {
     color: white;
-    text-shadow: 0px 2px 1px  rgb(133, 95, 239);
-
 }
 
-.text.dos{
-    color: white;
-    font-size: 4rem;
-    
+.portada {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 470px;
+}
+
+.portas {
+    width: 0;
+    flex-grow: 1;
+    object-fit: cover;
+    opacity: .8;
+    transition: .5s ease;
+    border-radius: 5px;
+}
+
+.portas:hover {
+    cursor: crosshair;
+    width: 100px;
+    opacity: 1;
+    filter: contrast(120%);
 }
 
 
 
-section{
+.porada {
     display: flex;
     flex-direction: row;
     width: 100%;
     height: 430px;
 }
 
-section img{
-    width: 0px;
-    min-width: 50px;
+.item {
     flex-grow: 1;
+    position: relative;
+    overflow: hidden;
+    width: 0;
+}
+
+.porta {
+    width: 100%;
+    height: 100%;
     object-fit: cover;
     opacity: 0.8;
     transition: 0.5s ease;
 }
-img :hover{
-    cursor: pointer;
-    background-color: red;
-    width: 300px;
+
+.tituloDos {
+    position: absolute;
+    font-family: 'yhlqmdlg';
+    font-size: 1.3rem;
+    color: white;
+    text-shadow: 0 2px 2px black;
+    bottom: 200px;
+    left: 20px;
+}
+
+.right {
+    left: 45px;
+}
+
+
+
+.item:hover .porta {
+
     opacity: 1;
+    width: 550px;
     filter: contrast(120%);
+    cursor: pointer;
+}
+
+.item:hover .tituloDos {
+    font-size: 1.7rem;
+    color: greenyellow;
+    cursor: pointer;
 }
 
 
 @media (max-width:768px) {
 
-    .sobre.dos{ 
+    .sobre.dos {
         margin-top: 20%;
     }
 
-    .imagenes{
-        margin-top: 25%;
-        display: block;
+    .imagenes {
+        gap: 3%;
+        width: 50%;
+        margin-top: 40%;
+        margin-bottom: 30%;
+        margin-left: 25%;
+    }
+
+    .categorias {
+        width: 50%;
         height: auto;
-        min-width: 200px;
-
-    }
-    .categorias.cuatro{
-        margin-left: 15%;
-        margin-top: 0%;
-        width: 30%;
-        height: 20%;
-        position: relative;
-       
         border-radius: 5px;
-    
-    }
-    .categorias.cinco{
-        width: 40%;
-        height: 17%;
-        border-radius: 5px;
-        position: relative;
-        margin-left: 20%;
-        margin-top: 2%;
+        box-shadow: 0px 0px 30px black;
         
     }
-    .categorias.tres{
-        margin-left: 10%;
-        width: 22%;
-        height: 15%;
-        border-radius: 5px;
+
+    .text.dos {
+        color: white;
+        margin-top: 25%;
+        margin-left: 25%;
+        text-align: center;
+        width: 100%;
     }
 
-    .categorias{
-        width: 48%;
-        margin-left: 2%;
-        height: 20%;
-        border-radius: 5px;
+    .porada {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        height: 430px;
+    }
     
+    .item {
+        flex-grow: 1;
+        position: relative;
+        overflow: hidden;
+        width: 0;
+    }
+    
+    .porta {
+        width: 90%;
+        height: 100%;
+        object-fit: cover;
+        opacity: 0.8;
+        transition: 0.5s ease;
+    }
+    
+    .tituloDos {
+        position: absolute;
+        font-family: 'yhlqmdlg';
+        font-size: 0.7rem;
+        color: white;
+        text-shadow: 0 2px 2px black;
+        bottom: 200px;
+        left: 6px;
+        
+    }
+    
+    
+    .item:hover .porta {
+    
+        opacity: 1;
+        width: 300px;
+        filter: contrast(120%);
+        cursor: pointer;
+    }
+    
+    .item:hover .tituloDos {
+        font-size: 0.7rem;
+        color: greenyellow;
+        cursor: pointer;
     }
 
-    .absoluto{
-        position: relative;
-        margin-left: 10%;
+
+}
+
+@media screen and (max-width: 1080px) and (orientation: landscape) {
+    .imagenes {
+        gap: 2%;
+        width: 50%;
         margin-top: 10%;
-        z-index: 3;
-        min-width: 200px;
-
+        margin-bottom: 20%;
+        margin-left: 15%;
     }
-    .categorias.dos{
-        width: 40%;
+
+    .categorias {
+        width: 70%;
+        height: auto;
+        border-radius: 5px;
+        box-shadow: 0px 0px 30px black;
         
     }
-    
+
+}
+
+
+@media screen and (max-width: 1380px) and (orientation: landscape) {
+
+    .imagenes {
+        gap: 2%;
+        width: 50%;
+        margin-top: 15%;
+        margin-bottom: 20%;
+        margin-left: 15%;
+    }
+
+    .categorias {
+        width: 70%;
+        height: auto;
+        border-radius: 5px;
+        box-shadow: 0px 0px 30px black;
+        
+    }
 }

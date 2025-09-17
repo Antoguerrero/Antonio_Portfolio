@@ -1,66 +1,85 @@
 "use client";
-import { motion, useScroll, useTransform } from "framer-motion";
-import { useRef } from "react";
-
 import './Estudios.css';
+import { motion } from "framer-motion";
+import React, { useState, useEffect } from 'react';
+
+
 
 export default function Estudios() {
 
-    const ref = useRef(null);
-    
-        const { scrollYProgress } = useScroll({
-          target: ref,
-          offset: ["start center", "end center"],
-        });
+    const [ver, setVer] = useState(false);
+    function dejarVer() {
+        setVer(true);
+    }
 
-    
-    
-        // Esto nos permite usar transformaciones
-        const leftX = useTransform(scrollYProgress, [0, 1], ["0%", "0%"]);
-        const rightX = useTransform(scrollYProgress, [0, 1], ["10%", "0%"]);
+    useEffect(() => {
 
-        
-    
-      
+        const ancho = window.innerWidth;
+        const delay = ancho <= 765 ? 3000 : 9000;
+
+        const time = setTimeout(() => {
+            dejarVer();
+        }, delay);
+
+        return () => clearTimeout(time);
+    },[]);
+
 
     return (
 
         <div>
             <div className="separador"></div>
-            <div className="despues dos" ref={ref}>
+            <div className="despues dos">
                 <div className="sobre dos">
-                    <motion.p style={{ x: leftX }} className="text">
-                        <p className="text">
-                            Durante mi estapa baloncestística he tenido la oportunidad de vivir muchas experiencias
-                            increíbles y poder haber disputado en todas las categorías a un alto nivel.
-                        </p>
-                    </motion.p>
+                    <p className="text dos">
+                        Durante mi estapa baloncestística he tenido la oportunidad de vivir muchas experiencias
+                        increíbles y poder haber disputado en todas las categorías a un alto nivel.
+                    </p>
+                </div>
+
+                <div className='imagenes' style={{ visibility: ver ? "visible" : "hidden", opacity: ver ? 1 : 0, transition: "opacity 1s" }}>
+                    <img className='categorias' src="/img/euroliga.png" alt="categoria" />
+                    <img className='categorias' src="/img/copa.jpg" alt="categoria" />
+                    <img className='categorias' src="/img/oro.png" alt="categoria" />
+                    <img className='categorias' src="/img/tercera.avif" alt="categoria" />
+                    <img className='categorias' src="/img/segunda.png" alt="categoria" />
 
                 </div>
-                <motion.div style={{ x: rightX }} >
-                    <div className='imagenes'>
-                        <img className='categorias' src="/img/euroliga.png" alt="categoria" />
-                        <img className='categorias' src="/img/copa.jpg" alt="categoria" />
-                        <img className='categorias tres' src="/img/eba.jpg" alt="categoria" />
-                        <img className='categorias cuatro' src="/img/plata.png" alt="categoria" />
-                        <img className='categorias cinco' src="/img/oro.jpg" alt="categoria" />
+            </div>
+            <section className='portada'>
+                <img className='portas' src="/img/euro_play.png" alt="euro" />
+                <img className='portas' src="/img/eba_play.png" alt="eba" />
+                <img className='portas' src="/img/eba_dos_play.png" alt="eba" />
+                <img className='portas' src="/img/plata_play.png" alt="plata" />
+                <img className='portas' src="/img/oro_play.png" alt="oro" />
 
-                        <div className="absoluto">
-                            <img className='categorias dos' src="/img/tercera.avif" alt="categoria" />
-                            <img className='categorias dos' src="/img/segunda.png" alt="categoria" />
-                        </div>
+            </section>
+            <div className="separadorDos">
 
-                    </div>
-                </motion.div>
             </div>
             <motion.p className="text">
-                 Y mientras jugaba me gradué en:
+                Y mientras jugaba, me gradué en:
             </motion.p>
-            <section>
-                    <img  src="/img/ad2.png" alt="ad" />
-                    <img  src="/img/daw.svg" alt="daw" />
-                    <img  src="/img/ia2.png" alt="ia" />
+            <section className='porada'>
+                <div className="item">
+                    <img className='porta' src="/img/ad2.png" alt="ad" />
+                    <h2 className='tituloDos'>Administración y finanzas</h2>
+                </div>
+
+                <div className="item">
+                    <img className='porta' src="/img/daw.svg" alt="daw" />
+                    <h2 className='tituloDos center'>Desarrollo de aplicaciones web</h2>
+                </div>
+
+                <div className="item">
+                    <img className='porta' src="/img/ia3.png" alt="ia" />
+                    <h2 className='tituloDos right'>Especialización Big data e IA</h2>
+                </div>
+
+
             </section>
+
+
 
         </div>
     )
