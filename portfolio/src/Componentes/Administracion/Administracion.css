@@ -1,0 +1,39 @@
+.soy.dos{
+    text-align: center;
+    font-size: 2.5rem;
+}
+
+@media (max-width:768px) {
+    .soy.dos{
+        font-size: 1.2rem;
+    }
+
+    .despues.tres{
+        display: block !important;
+        
+    }
+
+    .text.tres{
+        width: 100%;
+        text-align: center;
+        width: 100%;
+       padding: 2%;
+    }
+
+    .sobre.tres{
+        width: 100%;
+        height: auto;
+    }
+
+    .imagenes.dos{
+        height: auto;
+        margin-top: 0;
+        margin-bottom: 0;
+        margin-left: 40%;
+        padding: 0;
+        align-items: center;
+        gap: 10%;
+    }
+
+
+}

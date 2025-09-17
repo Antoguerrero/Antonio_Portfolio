@@ -2,10 +2,38 @@
 import './Estudios.css';
 import { motion } from "framer-motion";
 import React, { useState, useEffect } from 'react';
+import Administracion from '../Administracion/Administracion';
+import Desarrollo from '../Desarrollo/Desarrollo';
+import Inteligencia from '../Inteligencia/Inteligencia';
 
 
 
 export default function Estudios() {
+
+    const [mostrar,setMostrar] = useState(false);
+    const [mostrar2, setMostrar2] = useState(false);
+    const [mostrar3, setMostrar3] = useState(false);
+
+
+
+    function mostrarAD(){
+        setMostrar(true);
+        setMostrar3(false);
+        setMostrar2(false);
+    }
+
+    function mostrarDAW(){
+        setMostrar2(true);
+        setMostrar(false);
+        setMostrar3(false);
+    }
+
+    function mostrarIA(){
+        setMostrar2(false);
+        setMostrar3(true);
+        setMostrar(false);
+    }
+
 
     const [ver, setVer] = useState(false);
     function dejarVer() {
@@ -61,25 +89,32 @@ export default function Estudios() {
                 Y mientras jugaba, me gradué en:
             </motion.p>
             <section className='porada'>
-                <div className="item">
+                <div className="item" onClick={mostrarAD}>
                     <img className='porta' src="/img/ad2.png" alt="ad" />
                     <h2 className='tituloDos'>Administración y finanzas</h2>
                 </div>
 
-                <div className="item">
+                <div className="item" onClick={mostrarDAW}>
                     <img className='porta' src="/img/daw.svg" alt="daw" />
                     <h2 className='tituloDos center'>Desarrollo de aplicaciones web</h2>
                 </div>
 
-                <div className="item">
+                <div className="item" onClick={mostrarIA}>
                     <img className='porta' src="/img/ia3.png" alt="ia" />
                     <h2 className='tituloDos right'>Especialización Big data e IA</h2>
                 </div>
-
-
             </section>
 
 
+            <>
+            {mostrar && <Administracion/>}
+            </>
+            <>
+            {mostrar2 && <Desarrollo/>}
+            </>
+            <>
+            {mostrar3 && <Inteligencia/>}
+            </>
 
         </div>
     )
