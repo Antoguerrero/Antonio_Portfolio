@@ -23,7 +23,6 @@ export default function Desarrollo() {
                     <img className='categorias' src="/img/lab.png" alt="categoria" />
                 </div>
             </div>
-            <div className="separadorDos"></div>
     </div>
   )
 }

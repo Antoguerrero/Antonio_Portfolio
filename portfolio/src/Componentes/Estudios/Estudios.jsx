@@ -10,25 +10,32 @@ import Inteligencia from '../Inteligencia/Inteligencia';
 
 export default function Estudios() {
 
-    const [mostrar,setMostrar] = useState(false);
+    const [mostrar, setMostrar] = useState(false);
     const [mostrar2, setMostrar2] = useState(false);
     const [mostrar3, setMostrar3] = useState(false);
 
+    function cerrarTodo() {
+        setMostrar(false);
+        setMostrar2(false);
+        setMostrar3(false);
+
+    }
 
 
-    function mostrarAD(){
+
+    function mostrarAD() {
         setMostrar(true);
         setMostrar3(false);
         setMostrar2(false);
     }
 
-    function mostrarDAW(){
+    function mostrarDAW() {
         setMostrar2(true);
         setMostrar(false);
         setMostrar3(false);
     }
 
-    function mostrarIA(){
+    function mostrarIA() {
         setMostrar2(false);
         setMostrar3(true);
         setMostrar(false);
@@ -50,7 +57,7 @@ export default function Estudios() {
         }, delay);
 
         return () => clearTimeout(time);
-    },[]);
+    }, []);
 
 
     return (
@@ -107,15 +114,39 @@ export default function Estudios() {
 
 
             <>
-            {mostrar && <Administracion/>}
+                {mostrar && <>
+                    (<Administracion />
+                    <div className="centrar">
+                        <button onClick={cerrarTodo} id="cerrar" className='cerrar'>Cerrar <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
+                            <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708" />
+                        </svg></button>
+                    </div>)
+                </>}
             </>
             <>
-            {mostrar2 && <Desarrollo/>}
+                {mostrar2 && <>
+                    (<Desarrollo />
+                    <div className="centrar">
+                        <button onClick={cerrarTodo} id="cerrar" className='cerrar'>Cerrar <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
+                            <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708" />
+                        </svg></button>
+                    </div>)
+                </>}
             </>
             <>
-            {mostrar3 && <Inteligencia/>}
+                {mostrar3 && <>
+                    (<Inteligencia />
+                    <div className="centrar">
+                        <button onClick={cerrarTodo} id="cerrar" className='cerrar abajo'>Cerrar <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
+                            <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708" />
+                        </svg></button>
+                    </div>)
+                </>}
             </>
 
+            <div className="separadorDos"></div>
+
         </div>
+
     )
 }

@@ -10,6 +10,7 @@
     padding: 4%;
 }
 
+
 @media (max-width:768px) {
     .soy.dos{
         font-size: 1.2rem;
@@ -40,6 +41,10 @@
         padding: 0;
         align-items: center;
         gap: 10%;
+    }
+
+    .cerrar{
+        margin-top: 15%;
     }
 
 

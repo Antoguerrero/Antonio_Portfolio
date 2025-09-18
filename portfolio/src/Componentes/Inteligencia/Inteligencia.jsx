@@ -32,7 +32,6 @@ export default function Inteligencia() {
                     <img className='categorias' src="/img/aws.png" alt="categoria" />
                 </div>
             </div>
-            <div className="separadorDos"></div>
     </div>
   )
 }
