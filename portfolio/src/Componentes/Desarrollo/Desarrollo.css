@@ -1,0 +1,15 @@
+.link{
+    text-decoration: none;
+    cursor: pointer;
+    color: white;
+}
+
+.link:hover{
+    color: greenyellow;
+}
+
+.etiqueta{
+    border-radius: 5px;
+    box-shadow: 0px 0px 30px black;
+    padding: 4%;
+}

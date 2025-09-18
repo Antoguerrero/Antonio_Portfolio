@@ -32,6 +32,22 @@ export default function Inteligencia() {
                     <img className='categorias' src="/img/aws.png" alt="categoria" />
                 </div>
             </div>
+            <div className="container">
+        <h1 className='soy dos'>PROYECTOS DESTACADOS</h1>
+      </div>
+      <p className='text'>
+        <div className="etiqueta">
+          - Proyecto final Big Data -
+          <br /><sub>Amazon Web Services (s3, glue, datacatalog, eml, pySpark)</sub>
+        </div>
+
+        <br /><br />
+
+        <div className="etiqueta">
+        - Proyecto final Inteligencia Artificial -
+        <br /><sub>Amazon Web Services (s3, Canvas, python, numpy , pandas, ML)</sub>
+        </div>
+      </p>
     </div>
   )
 }
