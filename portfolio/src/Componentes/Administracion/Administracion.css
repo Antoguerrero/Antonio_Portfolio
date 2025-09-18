@@ -4,10 +4,10 @@
 }
 
 .text.tres{
-    width: 100%;
-    text-align: center;
     width: 95%;
-    padding: 4%;
+    text-align: center;
+    
+    
 }
 
 
@@ -18,19 +18,20 @@
 
     .despues.tres{
         display: block !important;
-        
+        margin: 0;
+        padding: 0;
     }
 
     .text.tres{
         width: 100%;
         text-align: center;
-        width: 100%;
         padding: 4%;
     }
 
     .sobre.tres{
-        width: 100%;
+        width: 95%;
         height: auto;
+        align-items: center;
     }
 
     .imagenes.dos{
@@ -45,6 +46,8 @@
 
     .cerrar{
         margin-top: 15%;
+        color: black;
+        margin-left: 5%;
     }
 
 
